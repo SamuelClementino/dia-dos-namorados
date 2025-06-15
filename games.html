@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nossas Memórias - PS4 Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="audio/musica.mp3" type="audio/mp3" />
+  </audio>
+
+  <div class="container">
+
+    <!-- Topo estilo PS4 -->
+    <header class="topo">
+      <div class="logo">
+        <img src="imgs/logo.png" alt="logo" />
+      </div>
+      <div class="usuario">
+        <img src="imgs/ps.png" alt="Usuário" />
+        <span>Nós Dois ❤️</span>
+      </div>
+    </header>
+
+<nav class="menu" id="menu">
+      <div class="card" data-title="Dia em que nos conhecemos 💖" data-desc="Lembro como se fosse ontem do dia em que nos conhecemos. Fomos a uma pizzaria aconchegante, onde o aroma das massas recém-saídas do forno preenchia o ar. Ela estava linda, com um sorriso que iluminava o ambiente e um brilho nos olhos que me deixou completamente encantado. A simplicidade daquele momento tornou-se inesquecível, e desde então, cada instante ao seu lado tem sido tão especial quanto aquela noite.">
+        <img src="imgs/foto1.png" alt="Nossa primeira memória juntos 💖" />
+        <div class="card-title">Dia em que nos conhecemos 💖</div>
+      </div>
+      <div class="card" data-title="Nossa primeira arte juntos 💖" data-desc="Em outro dia, mergulhamos juntos numa experiência mágica inspirada no estilo Ghibli. Entre cliques e risos, cada foto capturava não só nossa imagem, mas a essência do amor que crescia entre nós. A cada instante, sentia como se o tempo parasse, e só existíssemos nós dois naquele mundo cheio de sonhos e carinho. Foi um momento de pura conexão, onde a arte se tornou reflexo do sentimento mais bonito que eu poderia viver ao seu lado">
+        <img src="imgs/foto2.png" alt="Um dia de muito carinho" />
+        <div class="card-title">Nossa primeira arte juntos 💖</div>
+      </div>
+      <div class="card" data-title="Segunda arte juntos 💖" data-desc="Em outro dia, criamos uma segunda arte inspirada no estilo Ghibli, dessa vez para expressar toda a nossa felicidade. Entre fotos e risos, cada imagem revelava o brilho dos nossos olhares e a alegria que transbordava quando estávamos juntos. Era como se nossa felicidade ganhasse forma e cor, traduzida na leveza e na magia daquele momento. A arte se tornou a expressão perfeita do amor que cresce a cada dia, e eu sabia que, ao seu lado, a vida seria sempre assim: cheia de luz e alegria. ☀️">
+        <img src="imgs/foto3.png" alt="Artes" />
+        <div class="card-title">Segunda arte juntos 💖</div>
+      </div>
+      <div class="card" data-title="Nosso primeiro beijo" data-desc="Em outro dia, criamos uma segunda arte inspirada no estilo Ghibli, para expressar toda a nossa felicidade. Entre fotos e risos, capturamos também um momento inesquecível. O nosso primeiro beijo. Aquele instante parecia suspenso no tempo, cheio de emoção e ternura, como se o mundo inteiro desaparecesse ao nosso redor.
+
+Ao longo do tempo, pude acompanhar a sua evolução não só na maneira como se expressava diante das câmeras, mas também na sua confiança, na sua alegria e no brilho que foi crescendo nos seus olhos. Cada passo, cada sorriso, mostrava uma mulher que florescia, se descobria e se entregava ao amor de forma única. Essa transformação só fez fortalecer o que sentíamos, tornando nossa conexão ainda mais profunda e verdadeira.">
+        <img src="imgs/foto4.png" alt="Primeiro beijo" />
+        <div class="card-title">Nosso primeiro beijo</div>
+      </div>
+      <div class="card" data-title="Nosso primeiro dia dos namorados" data-desc="Obrigado por todos os momentos que compartilhamos, por cada sorriso, cada abraço e cada palavra doce. Neste Dia dos Namorados, celebro o amor que cresce entre nós e a felicidade que você traz para a minha vida. Sou grato por ter você ao meu lado, hoje e sempre.">
+        <img src="imgs/foto5.png" alt="Dia dos namorados" />
+        <div class="card-title">Nosso primeiro dia dos namorados</div>
+      </div>
+    </nav>
+
+    <!-- Botão limpar seleção -->
+    <div class="limpar-container">
+      <button id="btnLimpar">Limpar Seleção</button>
+    </div>
+
+    <!-- Descrição da foto -->
+    <section id="descricao" class="descricao">
+      Selecione uma memória acima para ver a descrição ❤️
+    </section>
+
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const descricao = document.getElementById('descricao');
+    const btnLimpar = document.getElementById('btnLimpar');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Remove destaque de todas
+        cards.forEach(c => c.classList.remove('active'));
+        // Destaca a clicada
+        card.classList.add('active');
+
+        // Atualiza descrição
+        const title = card.dataset.title;
+        const desc = card.dataset.desc;
+        descricao.innerHTML = `<h2>${title}</h2><p>${desc}</p>`;
+      });
+    });
+
+    btnLimpar.addEventListener('click', () => {
+      cards.forEach(c => c.classList.remove('active'));
+      descricao.textContent = 'Selecione uma memória acima para ver a descrição ❤️';
+    });
+  </script>
+
+</body>
+</html>
