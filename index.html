@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playstation 4</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playstation 4</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="corpo flex flex-col">
-        <div>
-            <img class="w-150 ml-25 pt-10" src="imgs/logo.png" alt="">
-        </div>
 
-        <div class="mt-20 ml-170">
-            <div class="flex items-center">
-                <img class="mr-2 h-5 w-7" src="imgs/controle.png" alt="">
-                <p class="text-white text-2xl">Jamile conectado em minha vida.</p>
-            </div>
-            <p class="text-white text-2xl">Quem está usando esse controle?</p>
-        </div>
+<body class="bg-black min-h-screen flex flex-col items-center justify-between px-4 py-6">
 
-        <div class="ml-130 mt-20 flex">
-            <a href="erro.html">
-                <div class="card-color h-80 w-60 cursor-pointer card-hover">
-                    <div class="w-60 h-60 flex justify-center items-center">
-                        <img class="w-20 h-20" src="imgs/plus.png" alt="">
-                    </div>
-                    <div class="text-center text-white text-2xl">Novo usuária</div>
-                </div>
-            </a>
+  <!-- Logo -->
+  <div class="w-full max-w-4xl flex justify-center">
+    <img src="imgs/logo.png" alt="Logo" class="w-36 md:w-56" />
+  </div>
 
-            <a href="games.html">
-                <div class="card-color h-80 w-60 ml-10 cursor-pointer card-hover">
-                    <div class="w-60 h-60">
-                       <img class="w-60 h-60 object-contain" src="imgs/jamile.png" alt="Jamile" />
-
-
-                    </div>
-                    <div class="mt-2 text-center text-white text-2xl">Jamile</div>
-                </div>
-            </a>
-
-        </div>
-
-        <!-- Rodapé -->
-        <div class="mt-46 flex ml-25">
-            <div class="flex items-center">
-                <img class="size-7 mr-2" src="imgs/x.png" alt="">
-                <p class="text-white text-2xl">Confirmar</p>
-            </div>
-            <div class="flex items-center ml-8 ">
-                <img class="size-7 mr-2" src="imgs/o.webp" alt="">
-                <p class="text-white text-2xl">Cancelar</p>
-            </div>
-        </div>
+  <!-- Texto superior -->
+  <div class="mt-10 text-center max-w-md">
+    <div class="flex justify-center items-center mb-4">
+      <img src="imgs/controle.png" alt="Controle" class="h-5 w-5 md:h-7 md:w-7 mr-2" />
+      <p class="text-white text-base md:text-2xl">Jamile conectada em minha vida.</p>
     </div>
+    <p class="text-white text-base md:text-2xl">Quem está usando esse controle?</p>
+  </div>
 
+  <!-- Cartões de usuário -->
+  <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl w-full">
+
+    <!-- Novo usuário -->
+    <a href="erro.html" class="w-48 md:w-56 h-72 bg-gradient-to-br from-blue-700 to-blue-500 rounded-xl shadow-lg
+        flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform">
+      <div class="h-48 flex justify-center items-center">
+        <img src="imgs/plus.png" alt="Novo usuário" class="w-16 h-16" />
+      </div>
+      <div class="text-white text-xl text-center">Nova usuária</div>
+    </a>
+
+    <!-- Usuário Jamile -->
+    <a href="games.html" class="w-48 md:w-56 h-72 bg-gradient-to-br from-blue-700 to-blue-500 rounded-xl shadow-lg
+        flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform">
+      <div class="h-48 flex justify-center items-center">
+        <img src="imgs/jamile.png" alt="Jamile" class="w-40 h-40 object-contain rounded-full" />
+      </div>
+      <div class="text-white text-xl mt-2 text-center">Jamile</div>
+    </a>
+
+  </div>
+
+  <!-- Rodapé -->
+  <div class="mt-16 flex justify-center gap-12 max-w-4xl w-full px-4">
+    <div class="flex items-center cursor-pointer">
+      <img src="imgs/x.png" alt="Confirmar" class="h-7 w-7 mr-2" />
+      <p class="text-white text-lg md:text-2xl">Confirmar</p>
+    </div>
+    <div class="flex items-center cursor-pointer">
+      <img src="imgs/o.webp" alt="Cancelar" class="h-7 w-7 mr-2" />
+      <p class="text-white text-lg md:text-2xl">Cancelar</p>
+    </div>
+  </div>
 
 </body>
+
 </html>
